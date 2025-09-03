@@ -1,0 +1,166 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* separa esquerda e direita */
+  align-items: center; /* alinha todos na vertical */
+  padding: 10px 20px;
+}
+
+header .topo {
+  display: flex;
+  gap: 10px; /* espaço entre nome e cargo */
+  align-items: center;
+}
+
+header .base {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+header .cargo {
+  color: rgb(153, 153, 153);
+  font-size: 15px;
+}
+
+header .navegacao {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin: 0;
+}
+
+header ul {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+header ul li:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px; /* espaço depois do item */
+  color: #000000;
+}
+
+main {
+  display: flex;
+  align-items: center; /* centraliza horizontalmente */
+  justify-content: center;
+  margin-right: 20px;
+  min-height: 80vh;
+  gap: 20px; /* espaço entre foto e texto */
+}
+
+main .imagem-perfil {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main .imagem-perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main .sobre-mim {
+  flex-direction: column; /* organiza em coluna */
+  align-items: flex-start; /* alinha à esquerda */
+  gap: 40px; /* espaço entre imagem e texto */
+}
+
+main .sobre-mim h1 {
+  font-size: 90px;
+  margin-bottom: 20px;
+  text-align: start;
+  margin-right: 20px;
+}
+
+main .sobre-mim p {
+  font-size: 20px;
+  text-align: start;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  color: rgb(85, 85, 85);
+}
+
+.contatos {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* organiza em coluna */
+  align-items: center; /* centraliza horizontal */
+  justify-content: center; /* centraliza vertical */
+}
+
+.contatos h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contatos ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 18px;
+  color: rgb(85, 85, 85);
+  text-align: left; /* mantém os itens alinhados entre si */
+}
+
+header ul li a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Responsividade  */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navegacao ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .imagem-perfil {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .sobre-mim h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .sobre-mim p {
+    font-size: 18px;
+    text-align: center;
+  }
+}
